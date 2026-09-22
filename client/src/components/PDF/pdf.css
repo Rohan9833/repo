@@ -1,0 +1,881 @@
+/* =====================================
+   AI POSTURE REPORT PDF THEME
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =====================================
+   PAGE
+===================================== */
+
+.pdf-page {
+
+    width: 794px;
+
+    min-height: 1123px;
+
+    background: #FFFFFF;
+
+    margin: auto;
+
+    position: relative;
+
+    overflow: hidden;
+
+    color: #1E293B;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.pdf-header {
+
+    background: #2563EB;
+
+    color: #FFFFFF;
+
+    padding: 40px;
+
+}
+
+.pdf-header h1 {
+
+    margin: 0;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+}
+
+.pdf-header p {
+
+    margin-top: 10px;
+
+    font-size: 17px;
+
+    color: #DCEBFF;
+
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.pdf-footer {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 18px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #64748B;
+
+    border-top: 1px solid #E5E7EB;
+
+    padding-top: 12px;
+
+    background: #FFFFFF;
+
+}
+
+/* =====================================
+   BODY
+===================================== */
+
+.pdf-body {
+
+    padding: 35px 40px;
+
+}
+
+/* =====================================
+   TITLES
+===================================== */
+
+.page-title {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+}
+
+.page-subtitle {
+
+    font-size: 15px;
+
+    color: #64748B;
+
+    margin-bottom: 30px;
+
+}
+
+/* =====================================
+   COVER PAGE
+===================================== */
+
+.cover-title {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+.cover-title h2 {
+
+    font-size: 34px;
+
+    color: #1E293B;
+
+    margin-bottom: 8px;
+
+}
+
+.cover-title p {
+
+    font-size: 17px;
+
+    color: #64748B;
+
+}
+
+.cover-top {
+
+    display: grid;
+
+    grid-template-columns: 260px 1fr;
+
+    gap: 35px;
+
+    align-items: start;
+
+    margin-bottom: 35px;
+
+}
+
+.cover-score {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.cover-patient {
+
+    width: 100%;
+
+}
+
+.cover-images {
+
+    margin-top: 20px;
+
+}
+
+/* =====================================
+   FLEX
+===================================== */
+
+.flex {
+
+    display: flex;
+
+}
+
+.space-between {
+
+    justify-content: space-between;
+
+}
+
+.align-center {
+
+    align-items: center;
+
+}
+
+.column {
+
+    flex-direction: column;
+
+}
+
+.gap20 {
+
+    gap: 20px;
+
+}
+
+.gap30 {
+
+    gap: 30px;
+
+}
+
+/* =====================================
+   GRID
+===================================== */
+
+.grid2 {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+}
+
+.grid3 {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+/* =====================================
+   CARD
+===================================== */
+
+.pdf-card {
+
+    background: #FFFFFF;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+}
+
+/* =====================================
+   SCORE CIRCLE
+===================================== */
+
+.score-circle {
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    border: 10px solid #CBD5E1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #FFFFFF;
+
+    text-align: center;
+
+}
+
+.score-value {
+
+    font-size: 58px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+}
+
+.score-total {
+
+    margin-top: 4px;
+
+    font-size: 18px;
+
+    color: #64748B;
+
+}
+
+.score-status {
+
+    margin-top: 12px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+}
+
+/* ===== Status Colors ===== */
+
+.score-circle.excellent {
+
+    border-color: #22C55E;
+
+}
+
+.score-circle.excellent .score-value,
+
+.score-circle.excellent .score-status {
+
+    color: #16A34A;
+
+}
+
+.score-circle.good {
+
+    border-color: #3B82F6;
+
+}
+
+.score-circle.good .score-value,
+
+.score-circle.good .score-status {
+
+    color: #2563EB;
+
+}
+
+.score-circle.mild {
+
+    border-color: #FACC15;
+
+}
+
+.score-circle.mild .score-value,
+
+.score-circle.mild .score-status {
+
+    color: #CA8A04;
+
+}
+
+.score-circle.moderate {
+
+    border-color: #FB923C;
+
+}
+
+.score-circle.moderate .score-value,
+
+.score-circle.moderate .score-status {
+
+    color: #EA580C;
+
+}
+
+.score-circle.severe {
+
+    border-color: #EF4444;
+
+}
+
+.score-circle.severe .score-value,
+
+.score-circle.severe .score-status {
+
+    color: #DC2626;
+
+}
+
+.status {
+
+    display: inline-block;
+
+    padding: 6px 14px;
+
+    border-radius: 25px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+.status-excellent {
+
+    background: #DCFCE7;
+
+    color: #166534;
+
+}
+
+.status-good {
+
+    background: #DBEAFE;
+
+    color: #1D4ED8;
+
+}
+
+.status-mild {
+
+    background: #FEF3C7;
+
+    color: #92400E;
+
+}
+
+.status-moderate {
+
+    background: #FED7AA;
+
+    color: #C2410C;
+
+}
+
+.status-severe {
+
+    background: #FEE2E2;
+
+    color: #B91C1C;
+
+}
+
+/* =====================================
+   FINDING CARD
+===================================== */
+
+.finding-card {
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    background: #FFFFFF;
+
+    margin-bottom: 18px;
+
+}
+
+.finding-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+
+}
+
+.finding-title {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #1E293B;
+
+}
+
+.measurement-block {
+
+    margin-bottom: 18px;
+
+}
+
+.measurement-label {
+
+    font-size: 13px;
+
+    color: #64748B;
+
+    margin-bottom: 6px;
+
+}
+
+.measurement-value {
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    color: #2563EB;
+
+}
+
+.finding-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+.small-label {
+
+    font-size: 13px;
+
+    color: #64748B;
+
+    margin-bottom: 4px;
+
+}
+
+.score-text {
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: #111827;
+
+}
+
+.severity-text {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #374151;
+
+}
+
+/* =====================================
+   FINDINGS PAGE
+===================================== */
+
+.page-heading {
+
+    margin-bottom: 30px;
+
+}
+
+.page-heading h2 {
+
+    font-size: 30px;
+
+    color: #1E293B;
+
+    margin-bottom: 8px;
+
+}
+
+.page-heading p {
+
+    color: #64748B;
+
+    font-size: 16px;
+
+}
+
+.findings-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+
+}
+
+/* =====================================
+   PATIENT DETAILS
+===================================== */
+
+.card-title {
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+    color: #1E293B;
+
+}
+
+.info-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+.info-table tr {
+
+    border-bottom: 1px solid #E5E7EB;
+
+}
+
+.info-table td {
+
+    padding: 14px 10px;
+
+    font-size: 15px;
+
+}
+
+.info-table td:first-child {
+
+    width: 40%;
+
+    font-weight: 700;
+
+    color: #475569;
+
+}
+
+.info-table td:last-child {
+
+    color: #111827;
+
+}
+
+/* =====================================
+   SCAN IMAGES
+===================================== */
+
+.scan-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+}
+
+.scan-card {
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    text-align: center;
+
+}
+
+.scan-card h3 {
+
+    margin-bottom: 15px;
+
+    font-size: 20px;
+
+    color: #1E293B;
+
+}
+
+.scan-photo {
+
+    width: 100%;
+
+    border-radius: 10px;
+
+    border: 2px solid #CBD5E1;
+
+}
+
+/* =====================================
+   SUMMARY
+===================================== */
+
+.summary-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #E5E7EB;
+
+}
+
+/* =====================================
+   RECOMMENDATIONS
+===================================== */
+
+.tip {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-top: 10px;
+
+}
+
+.tip-icon {
+
+    color: #16A34A;
+
+    font-weight: bold;
+
+}
+
+/* =====================================
+   RECOMMENDATION PAGE
+===================================== */
+
+.section-title {
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #1E293B;
+
+    margin-bottom: 18px;
+
+}
+
+.summary-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+}
+
+.summary-label {
+
+    color: #64748B;
+
+    font-size: 14px;
+
+}
+
+.summary-value {
+
+    margin-top: 10px;
+
+    font-size: 34px;
+
+    color: #2563EB;
+
+}
+
+.recommend-list {
+
+    margin-left: 22px;
+
+    line-height: 2;
+
+    font-size: 16px;
+
+}
+
+.recommend-list li {
+
+    margin-bottom: 6px;
+
+}
+
+/* =====================================
+   DISCLAIMER
+===================================== */
+
+.paragraph {
+
+    margin-bottom: 18px;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+
+    color: #334155;
+
+}
+
+.signature-section {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 80px;
+
+}
+
+.signature-box {
+
+    width: 260px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    color: #475569;
+
+}
+
+/* =====================================
+   SPACING
+===================================== */
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.center {
+
+    text-align: center;
+
+}
+
+.bold {
+
+    font-weight: bold;
+
+}

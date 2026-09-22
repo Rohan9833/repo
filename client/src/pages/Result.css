@@ -1,0 +1,245 @@
+.result-page {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 18px 22px 20px;
+    background: #f5faf6 !important;
+    color: #123b27;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+.result-header-wrap {
+    margin-bottom: 14px !important;
+}
+
+.result-header-wrap > * {
+    border-radius: 18px !important;
+}
+
+/* SCORE + PATIENT */
+
+.result-top-grid {
+    display: grid !important;
+    grid-template-columns: 0.95fr 1.45fr;
+    gap: 16px;
+    align-items: stretch;
+    margin-bottom: 16px;
+}
+
+.result-score-wrap,
+.result-patient-wrap {
+    min-width: 0;
+}
+
+.result-score-wrap > *,
+.result-patient-wrap > * {
+    height: 100% !important;
+    min-height: 215px !important;
+    box-sizing: border-box;
+}
+
+/* GENERAL CARD LOOK */
+
+.result-page .result-score-wrap > *,
+.result-page .result-patient-wrap > *,
+.result-page .result-images-wrap > *,
+.result-page .result-findings-wrap > *,
+.result-page .result-recommendation-wrap > * {
+    background: #ffffff !important;
+    border: 1px solid #dcecdf !important;
+    border-radius: 16px !important;
+    box-shadow: 0 5px 18px rgba(18, 59, 39, 0.07) !important;
+}
+
+/* GREEN ACCENT */
+
+.result-page h1,
+.result-page h2,
+.result-page h3 {
+    color: #124f30 !important;
+}
+
+.result-page button {
+    font-family: inherit;
+}
+
+/* SCORE CARD */
+
+.result-score-wrap {
+    overflow: hidden;
+}
+
+.result-score-wrap > * {
+    border-top: 3px solid #159447 !important;
+}
+
+/* PATIENT */
+
+.result-patient-wrap > * {
+    border-top: 3px solid #2fa653 !important;
+}
+
+/* IMAGES */
+
+.result-images-wrap {
+    margin-bottom: 16px !important;
+}
+
+.result-images-wrap > * {
+    padding: 18px !important;
+    box-sizing: border-box;
+}
+
+/* Try to keep preview images compact */
+
+.result-images-wrap img {
+    width: 100% !important;
+    max-height: 300px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+}
+
+/* FINDINGS */
+
+.result-findings-wrap {
+    margin-bottom: 16px !important;
+}
+
+.result-findings-wrap > * {
+    padding: 18px !important;
+    box-sizing: border-box;
+}
+
+/* compact finding cards */
+
+.result-findings-wrap > * > div {
+    box-sizing: border-box;
+}
+
+.result-findings-wrap [class*="finding"],
+.result-findings-wrap [class*="Finding"] {
+    border-radius: 12px !important;
+}
+
+/* RECOMMENDATIONS */
+
+.result-recommendation-wrap {
+    margin-bottom: 14px !important;
+}
+
+.result-recommendation-wrap > * {
+    padding: 18px !important;
+    box-sizing: border-box;
+}
+
+/* NEW SCAN */
+
+.new-scan-section {
+    width: 100%;
+    margin-top: 4px !important;
+    display: flex;
+    justify-content: center;
+}
+
+.new-scan-btn {
+    width: 100%;
+    max-width: 340px;
+    min-height: 42px;
+    padding: 10px 20px !important;
+
+    border: 1px solid #d2ead8 !important;
+    border-radius: 12px !important;
+
+    background: linear-gradient(
+        90deg,
+        #e9f8eb,
+        #dff5e3
+    ) !important;
+
+    color: #116b38 !important;
+
+    font-size: 14px !important;
+    font-weight: 700 !important;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.new-scan-btn span {
+    margin-right: 8px;
+    font-size: 17px;
+}
+
+.new-scan-btn:hover {
+    background: #d6f0db !important;
+    box-shadow: 0 5px 15px rgba(21, 148, 71, 0.14);
+    transform: translateY(-1px);
+}
+
+/* NO REPORT */
+
+.no-report {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #124f30;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .result-page {
+        padding: 14px 14px 18px;
+    }
+
+    .result-top-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-score-wrap > *,
+    .result-patient-wrap > * {
+        min-height: 190px !important;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .result-page {
+        padding: 10px;
+    }
+
+    .result-top-grid {
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .result-images-wrap {
+        margin-bottom: 10px !important;
+    }
+
+    .result-images-wrap > *,
+    .result-findings-wrap > *,
+    .result-recommendation-wrap > * {
+        padding: 12px !important;
+    }
+
+    .result-images-wrap img {
+        max-height: 220px !important;
+    }
+
+    .new-scan-btn {
+        max-width: 100%;
+    }
+
+}
