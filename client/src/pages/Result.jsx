@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 import PageContainer from "../components/Layout/PageContainer";
 import "./AssessmentSetup.css";
+import "../components/Report/report.css";
+import "./Result.css";
 import "../components/PDF/pdf.css";
 
 import ResultHeader from "../components/Report/ReportHeader";
