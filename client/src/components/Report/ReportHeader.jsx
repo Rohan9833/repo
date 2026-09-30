@@ -6,20 +6,18 @@ const ReportHeader = ({ onDownload }) => {
 
         <div className="report-header">
 
-            <div>
+            <div className="report-header-copy">
+                <span className="report-header-badge">
+                    Assessment complete
+                </span>
 
                 <h1>
-
-                    AI Posture Assessment Report
-
+                    Your Posture Assessment
                 </h1>
 
                 <p>
-
-                    Computer Vision Based Posture Analysis
-
+                    A clear summary of your posture analysis, findings and next steps.
                 </p>
-
             </div>
 
             <button
