@@ -32,3 +32,5 @@
 
 @media(max-width:900px){.report-header{align-items:flex-start;flex-direction:column}.patient-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.scan-grid{grid-template-columns:1fr}.scan-image{height:300px}}
 @media(max-width:600px){.patient-grid{grid-template-columns:1fr}.report-header h1{font-size:24px}.download-btn{width:100%}.scan-image{height:250px}}
+
+.report-header-copy{min-width:0}.report-header-badge{display:inline-flex;align-items:center;margin-bottom:9px;padding:5px 9px;border:1px solid #cde8d3;border-radius:999px;background:#eff9f1;color:#16743b;font-size:10px;font-weight:850;letter-spacing:.06em;text-transform:uppercase}.report-header-badge:before{content:"";width:6px;height:6px;margin-right:6px;border-radius:50%;background:#31a457}.report-header h1{letter-spacing:-.035em}.report-header p{max-width:620px;line-height:1.55}
