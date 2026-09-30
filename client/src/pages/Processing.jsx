@@ -15,6 +15,7 @@ import generateMeasurements from "../services/posture/measurementEngine";
 import { scoringEngine } from "../services/posture/scoringEngine";
 import assessmentEngine from "../services/posture/assessmentEngine";
 import recommendationEngine from "../services/posture/recommendationEngine";
+import "./Processing.css";
 
 const Processing = () => {
     const navigate = useNavigate();
@@ -341,7 +342,6 @@ const Processing = () => {
                 </div>
             </div>
         </PageContainer>
-    );
     );
 };
 
