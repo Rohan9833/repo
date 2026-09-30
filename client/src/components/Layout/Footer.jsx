@@ -1,114 +1,163 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="w-full bg-[#063522] text-white">
-      <div className="w-full px-8 py-8 sm:px-10 lg:px-16 xl:px-20">
 
-        <div className="flex justify-around items-center h-[150px] grid grid-cols-1 gap-8 sm:grid-cols-3 lg:gap-16">
+      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
+
+        <div className="grid gap-10 md:grid-cols-4">
 
           {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center text-2xl text-[#6cae5b]">
+          <div className="md:col-span-1">
+
+            <Link
+              to="/"
+              className="flex items-center gap-3"
+            >
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-green-900 text-2xl text-green-300">
                 ♧
               </div>
 
-              <h2 className="text-lg font-semibold">
+              <h2 className="text-xl font-bold">
                 BodySense
               </h2>
-            </div>
+            </Link>
 
-            <p className="mt-3 max-w-[220px] text-xs leading-5 text-gray-300">
-              AI-powered posture assessment
-              <br />
-              for a healthier you.
+            <p className="mt-4 max-w-xs text-sm leading-6 text-green-100/70">
+              AI-powered posture assessment designed to make posture
+              information easier to understand.
             </p>
+
+            <Link
+              to="/assessment"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-green-300 transition hover:text-white"
+            >
+              Start an assessment
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+
           </div>
 
-          {/* Quick Links */}
+
+          {/* Explore */}
           <div>
-            <h3 className="mb-3 text-xs font-medium">
-              Quick Links
+
+            <h3 className="mb-4 text-sm font-bold text-white">
+              Explore
             </h3>
 
-            <div className="flex flex-col gap-1.5">
-              <a
-                href="#how-it-works"
-                className="text-xs text-gray-300 transition hover:text-white"
+            <div className="flex flex-col gap-3">
+
+              <Link
+                to="/how-it-works"
+                className="text-sm text-green-100/70 transition hover:text-white"
               >
                 How It Works
-              </a>
+              </Link>
 
-              <a
-                href="#features"
-                className="text-xs text-gray-300 transition hover:text-white"
+              <Link
+                to="/features"
+                className="text-sm text-green-100/70 transition hover:text-white"
               >
                 Features
-              </a>
+              </Link>
 
-              <a
-                href="#about"
-                className="text-xs text-gray-300 transition hover:text-white"
+              <Link
+                to="/about"
+                className="text-sm text-green-100/70 transition hover:text-white"
               >
                 About Us
-              </a>
+              </Link>
 
-              <a
-                href="#contact"
-                className="text-xs text-gray-300 transition hover:text-white"
+              <Link
+                to="/blog"
+                className="text-sm text-green-100/70 transition hover:text-white"
               >
-                Contact
-              </a>
+                Blog
+              </Link>
+
             </div>
+
           </div>
 
-          {/* Follow Us */}
+
+          {/* Assessment */}
           <div>
-            <h3 className="mb-3 text-xs font-medium">
-              Follow Us
+
+            <h3 className="mb-4 text-sm font-bold text-white">
+              Assessment
             </h3>
 
-            <div className="flex items-center gap-2">
-              <a
-                href="#"
-                className="flex h-7 w-7 items-center justify-center rounded-full border border-gray-400 text-xs text-gray-300 hover:text-white"
-              >
-                ◎
-              </a>
+            <div className="flex flex-col gap-3">
 
-              <a
-                href="#"
-                className="flex h-7 w-7 items-center justify-center rounded-full border border-gray-400 text-xs text-gray-300 hover:text-white"
+              <Link
+                to="/assessment"
+                className="text-sm text-green-100/70 transition hover:text-white"
               >
-                ♥
-              </a>
+                Start Assessment
+              </Link>
 
-              <a
-                href="#"
-                className="flex h-7 w-7 items-center justify-center rounded-full border border-gray-400 text-xs font-bold text-gray-300 hover:text-white"
+              <Link
+                to="/assessment"
+                className="text-sm text-green-100/70 transition hover:text-white"
               >
-                f
-              </a>
+                Upload Scans
+              </Link>
 
-              <a
-                href="#"
-                className="flex h-7 w-7 items-center justify-center rounded-full border border-gray-400 text-[10px] font-bold text-gray-300 hover:text-white"
+              <Link
+                to="/assessment"
+                className="text-sm text-green-100/70 transition hover:text-white"
               >
-                in
-              </a>
+                View Your Results
+              </Link>
+
             </div>
+
           </div>
+
+
+          {/* Stay Connected */}
+          <div>
+
+            <h3 className="mb-4 text-sm font-bold text-white">
+              BodySense
+            </h3>
+
+            <p className="text-sm leading-6 text-green-100/70">
+              Explore the platform, learn how the assessment works, and
+              start when you're ready.
+            </p>
+
+            <Link
+              to="/assessment"
+              className="mt-5 inline-flex rounded-full bg-white px-5 py-2.5 text-sm font-bold text-green-900 transition hover:bg-green-50"
+            >
+              Get Started
+            </Link>
+
+          </div>
+
         </div>
 
-        {/* Copyright */}
-        <div className="mt-8 border-t border-white/10 pt-4 text-center">
-          <p className="text-[11px] text-gray-400">
+
+        {/* Bottom */}
+        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+
+          <p className="text-xs text-green-100/50">
             © 2026 BodySense. All rights reserved.
           </p>
+
+          <p className="text-xs text-green-100/40">
+            AI-powered posture assessment
+          </p>
+
         </div>
 
       </div>
+
     </footer>
   );
 };
